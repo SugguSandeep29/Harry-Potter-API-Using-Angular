@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<table mat-table [dataSource]="characters">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> name </th>
+    <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="role">
+    <th mat-header-cell *matHeaderCellDef> role </th>
+    <td mat-cell *matCellDef="let user"> {{user.role}} </td>
+  </ng-container>
+  <ng-container matColumnDef="house">
+    <th mat-header-cell *matHeaderCellDef> house </th>
+    <td mat-cell *matCellDef="let user"> {{user.house}} </td>
+  </ng-container>
+  <ng-container matColumnDef="school">
+    <th mat-header-cell *matHeaderCellDef> school </th>
+    <td mat-cell *matCellDef="let user"> {{user.school}} </td>
+  </ng-container>
+  <ng-container matColumnDef="bloodStatus">
+    <th mat-header-cell *matHeaderCellDef> bloodStatus </th>
+    <td mat-cell *matCellDef="let user"> {{user.bloodStatus}} </td>
+  </ng-container>
+  <ng-container matColumnDef="species">
+    <th mat-header-cell *matHeaderCellDef> species </th>
+    <td mat-cell *matCellDef="let user"> {{user.species}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+<tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</table>
